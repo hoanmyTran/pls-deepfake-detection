@@ -89,7 +89,7 @@ python main.py --config config.yaml
 ```bash
 python main.py --config config.yaml --eval \
   --checkpoint results/pls_xlsr300m/epoch=...ckpt \
-  --protocol_path protocol/21df.csv \
+  --protocol_path protocols/21df.csv \
   --output_score_file scores/21df
 ```
 
