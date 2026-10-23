@@ -103,7 +103,7 @@ python evaluate_datasets.py --config config.yaml \
   --output-root scores/pls_xlsr300m
 ```
 
-Or run `CHECKPOINT=... bash run_all.sh`. Each dataset gets its own output folder:
+Or run `CHECKPOINT=... bash run_all_evals.sh`. Each dataset gets its own output folder:
 
 ```text
 scores/pls_xlsr300m/
