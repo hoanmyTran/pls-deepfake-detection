@@ -57,8 +57,9 @@ trainer.test → LayerScoreWriter → score_fp.csv, score_b0.csv ... score_b23.c
 ## Installation
 
 ```bash
-conda create -n PLS pytorch=3.9
+conda create -n PLS python=3.9
 conda activate PLS
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
 ```
 
