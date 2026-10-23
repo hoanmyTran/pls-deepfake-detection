@@ -1,0 +1,70 @@
+model:
+  name: pls_xlsr300m
+  pretrained_model: facebook/wav2vec2-xls-r-300m
+  checkpoint: null
+  class_weights:
+  - 0.1
+  - 0.9
+  max_power: 1.5
+  k_power: 0.05
+compute:
+  strategy: auto
+  accelerator: gpu
+  device:
+  - 0
+  enable_model_summary: true
+evaluation:
+  eval: false
+  batch_size: 1
+  protocol_path: protocols/asvspoof19_eval.csv
+  transform: null
+  output_score_file: scores/asvspoof19_eval
+  score_flush_batches: 100
+  num_workers: 4
+  on_error: raise
+  output_root: scores/pls_xlsr300m
+  datasets_file: datasets.yaml
+training:
+  batch_size: 5
+  learning_rate: 2.5e-06
+  weight_decay: 0.0001
+  seed: 1234
+  num_epochs: 10
+  val_check_interval: 1.0
+  early_stopping:
+    enabled: true
+    es_monitor: val_loss
+    es_mode: min
+    patience: 3
+  model_checkpoint:
+    ckpt_monitor: val_loss
+    ckpt_mode: min
+    ckpt_save_top: 3
+dataset:
+  train:
+    protocol_path: protocols/asvspoof19_train.csv
+  val:
+    protocol_path: protocols/asvspoof19_dev.csv
+  transform: null
+  num_workers: 12
+  fixed_length: false
+  max_len: 64600
+  sampling_rate: 16000
+rawboost:
+  algo: 0
+  nBands: 5
+  minF: 20
+  maxF: 8000
+  minBW: 100
+  maxBW: 1000
+  minCoeff: 10
+  maxCoeff: 100
+  minG: 0
+  maxG: 0
+  minBiasLinNonLin: 5
+  maxBiasLinNonLin: 20
+  N_f: 5
+  P: 10
+  g_sd: 2
+  SNRmin: 10
+  SNRmax: 40
