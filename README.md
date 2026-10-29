@@ -116,6 +116,11 @@ scores/pls_xlsr300m/
 
 Each score file has `ID,Score,Label`; `Score` is the **two original logits**, `[Fake_Logit, Real_Logit]`. For EER, the countermeasure score is `Real_Logit - Fake_Logit`, so larger means more bona fide.
 
+## Compute metrics including pooled and average EERs
+```bash
+python evaluate_eer_directory.py --score_dir scores/pls/
+```
+
 ## Framework boundary: plug in and out
 
 ```python
