@@ -140,7 +140,7 @@ Our implementations use the source code from the following repositories:
 
 - [RawBoost Data Augmentation](https://github.com/TakHemlata/RawBoost-antispoofing)
 - [Pretrained XLS-R 300M](https://huggingface.co/facebook/wav2vec2-xls-r-300m)
-- [Metrics]([https://github.com/TakHemlata/RawBoost-antispoofing](https://github.com/nii-yamagishilab/AntiDeepfake))
+- [Metrics](https://github.com/nii-yamagishilab/AntiDeepfake)
 
 ## Citation
 ```  
