@@ -145,11 +145,11 @@ Our implementations use the source code from the following repositories:
 ## Citation
 ```  
 @inproceedings{
-anonymous2026progressive,
+tran2026progressive,
 title={Progressive Layer-wise Supervision: Deep-to-Shallow Supervision Annealing for Efficient and Robust Speech Deepfake Detection},
-author={Anonymous},
+author={Hoan My Tran and Xin Wang and Xuechen Liu},
 booktitle={The Fortieth Annual Conference on Neural Information Processing Systems},
 year={2026},
-url={}
+url={https://openreview.net/forum?id=kmOSYc5cfb}
 }
 ```  
